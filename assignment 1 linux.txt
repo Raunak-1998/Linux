@@ -1,0 +1,178 @@
+(slide 41)
+
+1.) mkdir test
+ 
+2.)cat >employeelist
+   cat >skillset
+
+3.)mkdir test2
+   cat >skillset
+   ln -s skillset slink
+   ln skillset hlinks
+   
+   	slinks file is not exected in the directory after deleting 	skillset,but hlinks file is there with skillset data.
+
+4.)sudo chgrp user2 filename
+
+5.)chmod 744 file
+
+6.) chmod o+w f33
+
+7.) chmod o-r f33
+
+8.) chgrp user3 employelists
+
+9.) chown user5 employelist
+
+10.) wc employelist
+
+(slide 47)
+
+1.) cat >file1 
+
+2.) cat >>file1
+
+3.) cat >file2
+
+4.) cat file1 file2
+
+5.) cat file1 file2
+
+6.) cat file1 file2 > file3
+
+7.) cat file1 file2 file3 file4 file5
+
+8.) cat file1 file2 file3 file4 file5 2>errorlog
+
+9.) cat file1 file5 >file10 2>file10
+
+10.) cp file1 file6 2>errorlog
+
+(slide 55)
+
+1.)tail +10 file | head -16
+
+2.)tail +10 file | head -1
+
+3.)ls -1t | head -5
+
+4.)ls -lsr | head -5
+
+6.)wc -l file
+
+7.)ls -l | grep "$(date +"%b %e")"
+
+(slide 61)
+    
+1.)grep -i [A] file
+
+2.)grep '[the]' file
+
+3.)grep '$[.]' file
+
+4.)grep -ni '[?abc]*' f32
+
+5.)cat file1 | grep "def\|deef\|deeef"
+
+6.)cat file1 | grep -v '^[0-9]'
+
+7.)cat file1 | grep -n "^$"
+
+8.)ls -d
+
+9.) grep -c '^$' flist
+
+slide 64
+
+1.) ls -l
+
+2.)ls | sort -r
+
+3.)ls -li
+
+4.)ls -r
+
+5.)ls -s >sortedfile
+
+(slide 67)
+
+1.)echo SONATA | tr [:upper:] [:lower:]
+
+2.)sed -i 's/^[0-9].*$//g' file
+
+3.)cat f1 | sed 's/ //g' file
+
+4.)grep -o [[:alpha:]] filename | wc -l
+
+5.)grep -o [aeiouAEIOU] file | wc -l
+
+(slide 95)
+
+1.) vi file1
+     i button
+     home button
+
+2.)dd on second line
+    u will restore back
+
+3.)/bc
+
+4.)dw
+
+5.):%s/c/C
+
+6.):%s/ /\t   
+
+7.)3yy copy the 1st 3 line
+    p is used for pasting
+
+8.)-3,$d
+
+9.) uu it will restore last 2 changes
+
+10.)w file
+
+slide: 116
+	
+Run a sort command of a large file at the background
+	sleep 100&
+		write down pid 
+	ps -l
+		write pid and ppid then logoff and login again
+	ps -l
+		then observe that pid and ppid will be not there
+
+Run a sort command of a large file at the background using nohup
+	nohup sleep 100&
+		write down pid 
+	ps -l
+		write pid and ppid then logoff and login again
+	ps -l
+		then observe that pid will be there but ppid will be not there
+
+Write a command that sleeps for 5 seconds and then prints hello
+	sleep 5s
+	echo "hello"
+
+
+slide: 118
+
+Write the command to send birthday wishes to your friend, whose birthday is tomorrow
+	echo "happy birthday" | at now +1 day
+
+
+slide: 120
+
+Try the commands done with at using crontab
+	crontab (to schedule job)
+	* * * * * >f10 (scheduled job which will create f1o file every minute)
+	crontab -l	(to check previous scheduled job)
+	at now +1 minute	(schedule job)
+	sleep 100&		(scheduled job)
+	at -l			(to see scheduled job)
+	at -r jobno(46)		(remove job)
+	crontab -r		(remove job
+
+
+
+
